@@ -15,7 +15,7 @@ public class JdbcApplication implements CommandLineRunner{
 
     @Override
     public void run(String... args){
-        String sql = "SELECT 2";
+        String sql = "SELECT 3";
         SqlParameterSource param = new MapSqlParameterSource();
         Integer result = jdbcTemplate.queryForObject(sql,param,Integer.class);
 
