@@ -1,0 +1,16 @@
+package com.sample.helloworld;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+	public static void main(String... args) {
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+		Main tMain = ctx.getBean(Main.class);
+		tMain.proc();
+		ctx.close();
+	}
+
+	public void proc() {
+		System.out.println("procの中");
+	}
+}
